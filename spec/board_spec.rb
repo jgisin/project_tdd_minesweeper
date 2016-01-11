@@ -12,5 +12,17 @@ describe "Board" do
 
   end
 
+  describe "#mine_locations" do
+
+    it "creates 9 random mine locations" do
+
+      expect(board.mine_locations.length).to eq(9)
+
+    end
+
+
+  end
+
   
 end
+
