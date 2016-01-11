@@ -1,4 +1,5 @@
 require 'board'
+require 'tile'
 
 describe "Board" do 
 
@@ -20,6 +21,25 @@ describe "Board" do
 
     end
 
+
+  end
+
+  describe "#tile_board" do
+
+    it "populates board with tiles" do
+      has_tile = true
+      board.board_array.each do |row|
+        row.each do |tile|
+          unless tile.is_a? Tile
+            has_tile = false
+            break
+          end
+        end
+        break unless has_tile
+      end
+      expect(has_tile).to eq(true)
+
+    end
 
   end
 
