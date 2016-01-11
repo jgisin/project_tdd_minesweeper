@@ -29,15 +29,18 @@ describe "Board" do
     it "populates board with tiles" do
       has_tile = true
       board.board_array.each do |row|
-        row.each do |tile|
-          unless tile.is_a? Tile
-            has_tile = false
-            break
-          end
-        end
-        break unless has_tile
+        expect(row).to_not be_empty
+        expect(row.all? {|tile| tile.is_a? Tile}).to eq(true)
       end
-      expect(has_tile).to eq(true)
+      #   row.each do |tile|
+      #     unless tile.is_a? Tile
+      #       has_tile = false
+      #       break
+      #     end
+      #   end
+      #   break unless has_tile
+      # end
+      # expect(has_tile).to eq(true)
 
     end
 
