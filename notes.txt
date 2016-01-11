@@ -1,0 +1,43 @@
+classes:
+  render
+    render board
+
+  play
+    game loop
+    lose
+      click on mine
+    win
+      all squares have status
+      all mines have flag
+    instructions
+
+  player
+    place flag
+      keep track of how many flags placed
+    place question mark
+    select square
+
+  board
+    instantiate a board after first player move
+    distribute 9 mines randomly
+      update surrounding squares (+= 1 mine)
+    print square in all directions until square status != empty
+    check board is cleared?
+
+
+  square (pending)
+    check adjacent squares
+    empty_square
+      display = _
+    mine_square
+      cause loss on click
+      display = *
+    adjacent_square
+      display = nearby mine count
+
+
+    status of square
+      flag or question or click
+      
+
+
