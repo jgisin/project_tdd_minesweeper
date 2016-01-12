@@ -40,4 +40,4 @@ classes:
       flag or question or click
       
 
-
+      row << Tile.new

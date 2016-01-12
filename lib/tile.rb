@@ -1,7 +1,10 @@
 class Tile
-  attr_accessor :mine, :flag, :revealed, :display
+  attr_accessor :mine, :flag, :revealed, :display, :nearby, :row, :column
 
-  def initalize
+  def initialize(row, column)
+    @row = row
+    @column = column
+    @nearby = 0
     @mine = false
     @flag = false
     @revealed = false
@@ -30,7 +33,13 @@ class Tile
     if @flag
       @display = "F"
     end
+    # if @revealed
+    #   if @mine was true show "*"
+    #   else show the @nearby
+    #     if @nearby is 0 display " "  
   end
+
+
 
 
 end
